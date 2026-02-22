@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Estate — Apex Capital Trust | Curated Property Investments</title>
+<meta name="description" content="Institutional-grade real estate opportunities across Faridabad, Gurugram, and beyond — handpicked for capital appreciation, rental yield, and lasting legacy.">
+<link rel="stylesheet" href="apex-global.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-crest">⬡</div>
+    <div>
+      <div class="nav-logo-text">Apex Capital Trust</div>
+      <div class="nav-logo-sub">Private Wealth Advisory</div>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="index.html">About</a></li>
+    <li class="nav-pill"></li>
+    <li><a href="real-estate.html" class="active">Long Term Investment</a></li>
+    <li class="nav-pill"></li>
+    <li><a href="short-term-investment.html">Short Term Investment</a></li>
+    <li class="nav-pill"></li>
+  </ul>
+
+  <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=919212494936" class="nav-btn">Consult Now</a>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-item"><a href="index.html">About</a></div>
+  <div class="mobile-nav-item"><a href="real-estate.html">Long Term Investment</a></div>
+  <div class="mobile-nav-item"><a href="short-term-investment.html">Short Term Investment</a></div>
+  <div class="mobile-nav-item"><a href="#contact">Contact</a></div>
+  <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=919212494936" class="mobile-nav-cta">Consult Now →</a>
+</div>
+
+<!-- HERO BANNER -->
+<div class="re-hero">
+  <div class="corner corner--tl"></div>
+  <div class="corner corner--tr"></div>
+  <div class="re-hero-inner">
+    <div class="eyebrow">
+      <div class="eyebrow-line"></div>
+      <span>Pillar I · Long-Term Investment</span>
+    </div>
+    <h1>Curated <em>Real Estate</em><br>Investments</h1>
+    <p>Institutional-grade property opportunities across Faridabad, Gurugram, Greater Faridabad and beyond — handpicked for capital appreciation, rental yield, and lasting legacy.</p>
+    <div class="re-hero-stats">
+      <div class="re-hero-stat"><div class="n">150+</div><div class="l">Curated Projects</div></div>
+      <div class="re-hero-stat"><div class="n">₹1Cr+</div><div class="l">Starting Portfolio</div></div>
+      <div class="re-hero-stat"><div class="n">12–16%</div><div class="l">Expected Returns</div></div>
+      <div class="re-hero-stat"><div class="n">5</div><div class="l">Prime Locations</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar" id="filter-bar">
+  <div class="filter-inner">
+    <div class="filter-group">
+      <span class="filter-label">City</span>
+      <div class="filter-chips">
+        <div class="chip active" onclick="setFilter(this,'city')">All Cities</div>
+        <div class="chip" onclick="setFilter(this,'city')">Faridabad</div>
+        <div class="chip" onclick="setFilter(this,'city')">Greater Faridabad</div>
+        <div class="chip" onclick="setFilter(this,'city')">Gurugram</div>
+        <div class="chip" onclick="setFilter(this,'city')">Sohna</div>
+        <div class="chip" onclick="setFilter(this,'city')">Pataudi</div>
+      </div>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">Type</span>
+      <div class="filter-chips">
+        <div class="chip active" onclick="setFilter(this,'type')">All</div>
+        <div class="chip" onclick="setFilter(this,'type')">Residential</div>
+        <div class="chip" onclick="setFilter(this,'type')">Commercial</div>
+        <div class="chip" onclick="setFilter(this,'type')">REITs</div>
+      </div>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">Status</span>
+      <div class="filter-chips">
+        <div class="chip active" onclick="setFilter(this,'status')">All</div>
+        <div class="chip" onclick="setFilter(this,'status')">New Launch</div>
+        <div class="chip" onclick="setFilter(this,'status')">Under Construction</div>
+        <div class="chip" onclick="setFilter(this,'status')">Ready to Move</div>
+      </div>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">Property</span>
+      <div class="filter-chips">
+        <div class="chip active" onclick="setFilter(this,'prop')">All</div>
+        <div class="chip" onclick="setFilter(this,'prop')">Apartments</div>
+        <div class="chip" onclick="setFilter(this,'prop')">Villas</div>
+        <div class="chip" onclick="setFilter(this,'prop')">Builder Floor</div>
+        <div class="chip" onclick="setFilter(this,'prop')">Plots</div>
+        <div class="chip" onclick="setFilter(this,'prop')">Penthouses</div>
+        <div class="chip" onclick="setFilter(this,'prop')">Offices</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BROWSE BY STATUS -->
+<section class="browse-section sr">
+  <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>Browse by Status</span></div>
+  <h2 class="sec-title">Find Projects at Every <em>Stage</em></h2>
+  <div class="status-grid">
+    <div class="status-card active-status sr sr-d1" onclick="setStatusFilter(this)">
+      <div class="status-icon">🏙️</div>
+      <h3>All Projects</h3>
+      <div class="status-count">150+ Curated Opportunities</div>
+    </div>
+    <div class="status-card sr sr-d2" onclick="setStatusFilter(this)">
+      <div class="status-icon">✨</div>
+      <h3>New Launch</h3>
+      <div class="status-count">38 Projects · Best Prices</div>
+    </div>
+    <div class="status-card sr sr-d3" onclick="setStatusFilter(this)">
+      <div class="status-icon">🏗️</div>
+      <h3>Under Construction</h3>
+      <div class="status-count">42 Projects · Pre-Delivery</div>
+    </div>
+    <div class="status-card sr sr-d4" onclick="setStatusFilter(this)">
+      <div class="status-icon">🔑</div>
+      <h3>Ready to Move</h3>
+      <div class="status-count">70 Projects · Immediate Possession</div>
+    </div>
+  </div>
+</section>
+
+<!-- RECENTLY LAUNCHED -->
+<section class="section-block sr" style="background:var(--ink);border-top:1px solid var(--gold-line);margin-top:70px">
+  <div class="section-header sr">
+    <div>
+      <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>Recently Launched</span></div>
+      <h2 class="sec-title" style="margin-bottom:0">Newest <em>Opportunities</em></h2>
+    </div>
+    <a href="#" class="view-all">View All →</a>
+  </div>
+  <div class="carousel-wrap sr">
+    <button class="carousel-btn prev" onclick="scrollCarousel(-1,'recent')">←</button>
+    <div class="carousel-track" id="recent">
+
+      <div class="prop-card">
+        <div class="prop-img"><div class="prop-img-placeholder">🏢</div><div class="prop-badge new">New Launch</div></div>
+        <div class="prop-body">
+          <div class="prop-type-row"><span class="prop-type">Residential · Apartment</span><span class="prop-location">Sector 75, Faridabad</span></div>
+          <div class="prop-name">Prestige Skyline Residences</div>
+          <div class="prop-sub">3 &amp; 4 BHK Ultra-luxury apartments with panoramic views</div>
+          <div class="prop-configs">
+            <div class="prop-config-row"><span class="prop-config-label">3 BHK (1850 sq.ft)</span><span class="prop-config-price">₹ 1.85 Cr</span></div>
+            <div class="prop-config-row"><span class="prop-config-label">4 BHK (2400 sq.ft)</span><span class="prop-config-price">₹ 2.60 Cr</span></div>
+            <div class="prop-config-row"><span class="prop-config-label">4 BHK+Study (2700 sq.ft)</span><span class="prop-config-price">₹ 3.10 Cr</span></div>
+          </div>
+          <div class="prop-footer"><span class="prop-rera">RERA: HR/FAR/GGN/2024/001</span><a href="#" class="prop-cta">Details →</a></div>
+        </div>
+      </div>
+
+      <div class="prop-card">
+        <div class="prop-img"><div class="prop-img-placeholder">🏗️</div><div class="prop-badge new">New Launch</div></div>
+        <div class="prop-body">
+          <div class="prop-type-row"><span class="prop-type">Commercial · Office</span><span class="prop-location">Sector 88, Greater Faridabad</span></div>
+          <div class="prop-name">Apex Business Tower</div>
+          <div class="prop-sub">Grade A office spaces in a landmark mixed-use development</div>
+          <div class="prop-configs">
+            <div class="prop-config-row"><span class="prop-config-label">Small Office (600 sq.ft)</span><span class="prop-config-price">₹ 48 L</span></div>
+            <div class="prop-config-row"><span class="prop-config-label">Mid Office (1200 sq.ft)</span><span class="prop-config-price">₹ 92 L</span></div>
+            <div class="prop-config-row"><span class="prop-config-label">Corner Suite (2000 sq.ft)</span><span class="prop-config-price">₹ 1.55 Cr</span></div>
+          </div>
+          <div class="prop-footer"><span class="prop-rera">RERA: HR/FAR/GGN/2024/002</span><a href="#" class="prop-cta">Details →</a></div>
+        </div>
+      </div>
+
+      <div class="prop-card">
+        <div class="prop-img"><div class="prop-img-placeholder">🏡</div><div class="prop-badge new">New Launch</div></div>
+        <div class="prop-body">
+          <div class="prop-type-row"><span class="prop-type">Residential · Villa</span><span class="prop-location">Sohna Road, Gurugram</span></div>
+          <div class="prop-name">Emerald Estate Villas</div>
+          <div class="prop-sub">Independent luxury villas with private gardens and clubhouse</div>
+          <div class="prop-configs">
+            <div class="prop-config-row"><span class="prop-config-label">4 BHK Villa (3500 sq.ft)</span><span class="prop-config-price">₹ 4.20 Cr</span></div>
+            <div class="prop-config-row"><span class="prop-config-label">5 BHK Villa (4200 sq.ft)</span><span class="prop-config-price">₹ 5.80 Cr</span></div>
+          </div>
+          <div class="prop-footer"><span class="prop-rera">RERA: HR/GGN/2024/003</span><a href="#" class="prop-cta">Details →</a></div>
+        </div>
+      </div>
+
+      <div class="prop-card">
+        <div class="prop-img"><div class="prop-img-placeholder">🏘️</div><div class="prop-badge new">New Launch</div></div>
+        <div class="prop-body">
+          <div class="prop-type-row"><span class="prop-type">Residential · Plots</span><span class="prop-location">Pataudi, Haryana</span></div>
+          <div class="prop-name">Greenfield Township Plots</div>
+          <div class="prop-sub">DTCP-approved residential plots in a planned township</div>
+          <div class="prop-configs">
+            <div class="prop-config-row"><span class="prop-config-label">100 Sq. Yd. Plot</span><span class="prop-config-price">₹ 28 L</span></div>
+            <div class="prop-config-row"><span class="prop-config-label">200 Sq. Yd. Plot</span><span class="prop-config-price">₹ 52 L</span></div>
+            <div class="prop-config-row"><span class="prop-config-label">500 Sq. Yd. Plot</span><span class="prop-config-price">₹ 1.10 Cr</span></div>
+          </div>
+          <div class="prop-footer"><span class="prop-rera">DTCP Approved</span><a href="#" class="prop-cta">Details →</a></div>
+        </div>
+      </div>
+
+      <div class="prop-card">
+        <div class="prop-img"><div class="prop-img-placeholder">🏦</div><div class="prop-badge reit">REIT</div></div>
+        <div class="prop-body">
+          <div class="prop-type-row"><span class="prop-type">REIT · Exchange Listed</span><span class="prop-location">Pan-India</span></div>
+          <div class="prop-name">Embassy Office Parks REIT</div>
+          <div class="prop-sub">India's largest office REIT with Grade A properties</div>
+          <div class="prop-configs">
+            <div class="prop-config-row"><span class="prop-config-label">Min. Investment</span><span class="prop-config-price">₹ 5,000</span></div>
+            <div class="prop-config-row"><span class="prop-config-label">Quarterly Yield</span><span class="prop-config-price">~8.5% p.a.</span></div>
+            <div class="prop-config-row"><span class="prop-config-label">Exchange Listed</span><span class="prop-config-price">NSE / BSE</span></div>
+          </div>
+          <div class="prop-footer"><span class="prop-rera">SEBI Regulated</span><a href="#" class="prop-cta">Invest →</a></div>
+        </div>
+      </div>
+
+    </div>
+    <button class="carousel-btn next" onclick="scrollCarousel(1,'recent')">→</button>
+  </div>
+</section>
+
+<!-- TRENDING / FEATURED -->
+<section class="section-block">
+  <div class="section-header sr">
+    <div>
+      <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>Featured Projects</span></div>
+      <h2 class="sec-title" style="margin-bottom:0">Trending <em>Investments</em></h2>
+    </div>
+    <a href="#" class="view-all">View All →</a>
+  </div>
+
+  <div class="featured-card sr">
+    <div class="featured-img">
+      <div class="featured-img-ph">🏙️</div>
+      <div class="prop-badge new" style="position:absolute;top:16px;left:16px">Featured · New Launch</div>
+    </div>
+    <div class="featured-body">
+      <div>
+        <div class="featured-tag">Residential · Luxury Apartments</div>
+        <h2>Grand Meridian Tower</h2>
+        <div class="sub">5 BHK Penthouses &amp; 4 BHK Ultra-luxury residences in Sector 46, Golf Course Extension Road, Gurugram. Unparalleled views, concierge services, and a world-class clubhouse.</div>
+        <div class="featured-configs">
+          <div class="featured-config"><span class="fc-label">4 BHK + Family Lounge (3800 sq.ft)</span><span class="fc-price">₹ 8.50 Cr</span></div>
+          <div class="featured-config"><span class="fc-label">5 BHK Luxury (4600 sq.ft)</span><span class="fc-price">₹ 12.00 Cr</span></div>
+          <div class="featured-config"><span class="fc-label">Penthouse (7000 sq.ft)</span><span class="fc-price">₹ 22.00 Cr</span></div>
+        </div>
+      </div>
+      <div class="featured-actions">
+        <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=919212494936" class="btn-sm-gold">Schedule Site Visit</a>
+        <a href="#" class="btn-sm-ghost">Get Brochure</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Location Tabs -->
+  <div class="loc-tabs sr">
+    <div class="loc-tab active" onclick="setLocTab(this)">All Locations</div>
+    <div class="loc-tab" onclick="setLocTab(this)">Faridabad</div>
+    <div class="loc-tab" onclick="setLocTab(this)">Greater Faridabad</div>
+    <div class="loc-tab" onclick="setLocTab(this)">Gurugram</div>
+    <div class="loc-tab" onclick="setLocTab(this)">Sohna</div>
+  </div>
+
+  <!-- Investment Type Filter -->
+  <div class="inv-type-row sr">
+    <div class="inv-type-chip active" onclick="setInvType(this)"><span class="ico">🏙️</span><span>All Types</span></div>
+    <div class="inv-type-chip" onclick="setInvType(this)"><span class="ico">🏢</span><span>Commercial</span></div>
+    <div class="inv-type-chip" onclick="setInvType(this)"><span class="ico">🏘️</span><span>Residential</span></div>
+    <div class="inv-type-chip" onclick="setInvType(this)"><span class="ico">🏡</span><span>Villas</span></div>
+    <div class="inv-type-chip" onclick="setInvType(this)"><span class="ico">🏗️</span><span>Plots</span></div>
+    <div class="inv-type-chip" onclick="setInvType(this)"><span class="ico">📈</span><span>REITs</span></div>
+    <div class="inv-type-chip" onclick="setInvType(this)"><span class="ico">👑</span><span>Penthouses</span></div>
+  </div>
+
+  <!-- Projects Grid -->
+  <div class="proj-grid sr">
+    <div class="prop-card">
+      <div class="prop-img"><div class="prop-img-placeholder">🏢</div><div class="prop-badge ready">Ready to Move</div></div>
+      <div class="prop-body">
+        <div class="prop-type-row"><span class="prop-type">Commercial · Office</span><span class="prop-location">Sector 65, Gurugram</span></div>
+        <div class="prop-name">Vatika Business Park</div>
+        <div class="prop-sub">Fully fitted Grade A offices in Gurugram's business hub</div>
+        <div class="prop-configs">
+          <div class="prop-config-row"><span class="prop-config-label">800 sq.ft Office</span><span class="prop-config-price">₹ 72 L</span></div>
+          <div class="prop-config-row"><span class="prop-config-label">1500 sq.ft Suite</span><span class="prop-config-price">₹ 1.35 Cr</span></div>
+        </div>
+        <div class="prop-footer"><span class="prop-rera">RERA Approved</span><a href="#" class="prop-cta">Details →</a></div>
+      </div>
+    </div>
+
+    <div class="prop-card">
+      <div class="prop-img"><div class="prop-img-placeholder">🏘️</div><div class="prop-badge under">Under Construction</div></div>
+      <div class="prop-body">
+        <div class="prop-type-row"><span class="prop-type">Residential · Builder Floor</span><span class="prop-location">Sector 56, Faridabad</span></div>
+        <div class="prop-name">Suncrest Builder Floors</div>
+        <div class="prop-sub">Independent floors with terrace rights and private entry</div>
+        <div class="prop-configs">
+          <div class="prop-config-row"><span class="prop-config-label">Ground Floor (1800 sq.ft)</span><span class="prop-config-price">₹ 95 L</span></div>
+          <div class="prop-config-row"><span class="prop-config-label">First Floor (1800 sq.ft)</span><span class="prop-config-price">₹ 85 L</span></div>
+          <div class="prop-config-row"><span class="prop-config-label">Terrace Floor</span><span class="prop-config-price">₹ 80 L</span></div>
+        </div>
+        <div class="prop-footer"><span class="prop-rera">RERA: HR/FAR/2023/088</span><a href="#" class="prop-cta">Details →</a></div>
+      </div>
+    </div>
+
+    <div class="prop-card">
+      <div class="prop-img"><div class="prop-img-placeholder">🏡</div><div class="prop-badge new">New Launch</div></div>
+      <div class="prop-body">
+        <div class="prop-type-row"><span class="prop-type">Residential · Villa</span><span class="prop-location">Sector 48, Sohna</span></div>
+        <div class="prop-name">Royal Palms Villas</div>
+        <div class="prop-sub">Luxury independent villas with 3-side open plots and lush landscaping</div>
+        <div class="prop-configs">
+          <div class="prop-config-row"><span class="prop-config-label">4 BHK Villa</span><span class="prop-config-price">₹ 3.80 Cr</span></div>
+          <div class="prop-config-row"><span class="prop-config-label">5 BHK Villa</span><span class="prop-config-price">₹ 5.50 Cr</span></div>
+          <div class="prop-config-row"><span class="prop-config-label">6 BHK Grand Villa</span><span class="prop-config-price">₹ 8.20 Cr</span></div>
+        </div>
+        <div class="prop-footer"><span class="prop-rera">RERA: HR/SOH/2024/011</span><a href="#" class="prop-cta">Details →</a></div>
+      </div>
+    </div>
+
+    <div class="prop-card">
+      <div class="prop-img"><div class="prop-img-placeholder">🏦</div><div class="prop-badge reit">REIT</div></div>
+      <div class="prop-body">
+        <div class="prop-type-row"><span class="prop-type">REIT · Fractional</span><span class="prop-location">Bengaluru / Mumbai</span></div>
+        <div class="prop-name">Mindspace Business Parks</div>
+        <div class="prop-sub">Commercial REIT across IT parks in Hyderabad, Pune, Mumbai</div>
+        <div class="prop-configs">
+          <div class="prop-config-row"><span class="prop-config-label">Min. Investment</span><span class="prop-config-price">₹ 10,000</span></div>
+          <div class="prop-config-row"><span class="prop-config-label">Distribution Yield</span><span class="prop-config-price">~8.0% p.a.</span></div>
+        </div>
+        <div class="prop-footer"><span class="prop-rera">SEBI Regulated · NSE Listed</span><a href="#" class="prop-cta">Invest →</a></div>
+      </div>
+    </div>
+
+    <div class="prop-card">
+      <div class="prop-img"><div class="prop-img-placeholder">🏗️</div><div class="prop-badge under">Under Construction</div></div>
+      <div class="prop-body">
+        <div class="prop-type-row"><span class="prop-type">Residential · Apartment</span><span class="prop-location">Sector 89, Greater Faridabad</span></div>
+        <div class="prop-name">Horizon Heights</div>
+        <div class="prop-sub">2, 3 &amp; 4 BHK modern apartments with smart home features</div>
+        <div class="prop-configs">
+          <div class="prop-config-row"><span class="prop-config-label">2 BHK (1100 sq.ft)</span><span class="prop-config-price">₹ 58 L</span></div>
+          <div class="prop-config-row"><span class="prop-config-label">3 BHK (1550 sq.ft)</span><span class="prop-config-price">₹ 82 L</span></div>
+          <div class="prop-config-row"><span class="prop-config-label">4 BHK (2100 sq.ft)</span><span class="prop-config-price">₹ 1.15 Cr</span></div>
+        </div>
+        <div class="prop-footer"><span class="prop-rera">RERA: HR/GFB/2024/032</span><a href="#" class="prop-cta">Details →</a></div>
+      </div>
+    </div>
+
+    <div class="prop-card">
+      <div class="prop-img"><div class="prop-img-placeholder">👑</div><div class="prop-badge ready">Ready to Move</div></div>
+      <div class="prop-body">
+        <div class="prop-type-row"><span class="prop-type">Residential · Penthouse</span><span class="prop-location">Golf Course Road, Gurugram</span></div>
+        <div class="prop-name">Empyrean Penthouses</div>
+        <div class="prop-sub">Sky-level living with private rooftop pool and 270° city views</div>
+        <div class="prop-configs">
+          <div class="prop-config-row"><span class="prop-config-label">4 BHK Penthouse (5500 sq.ft)</span><span class="prop-config-price">₹ 18.5 Cr</span></div>
+          <div class="prop-config-row"><span class="prop-config-label">Duplex Penthouse (8000 sq.ft)</span><span class="prop-config-price">₹ 32.0 Cr</span></div>
+        </div>
+        <div class="prop-footer"><span class="prop-rera">RERA Approved</span><a href="#" class="prop-cta">Details →</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:50px" class="sr">
+    <a href="#" class="btn-sm-ghost" style="padding:14px 48px;font-size:.62rem">Load More Projects →</a>
+  </div>
+</section>
+
+<!-- WHY INVEST STRIP -->
+<div class="why-strip sr">
+  <div class="why-item">
+    <div class="why-icon">🔍</div>
+    <h5>Curated &amp; Verified</h5>
+    <p>Every project is personally inspected, legally vetted, and fundamentally sound before we present it to you.</p>
+  </div>
+  <div class="why-divider"></div>
+  <div class="why-item">
+    <div class="why-icon">📋</div>
+    <h5>RERA Compliant</h5>
+    <p>All residential and commercial projects are RERA registered — full transparency and legal protection.</p>
+  </div>
+  <div class="why-divider"></div>
+  <div class="why-item">
+    <div class="why-icon">💼</div>
+    <h5>End-to-End Support</h5>
+    <p>From site visit to registration, home loan assistance to rental management — we handle it all.</p>
+  </div>
+  <div class="why-divider"></div>
+  <div class="why-item">
+    <div class="why-icon">🏆</div>
+    <h5>Exclusive Access</h5>
+    <p>Pre-launch pricing and priority allocation for Apex clients — advantages unavailable to the general public.</p>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="process-section">
+  <div class="sr">
+    <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>Our Process</span></div>
+    <h2 class="sec-title">How We Guide Your <em>Property Journey</em></h2>
+  </div>
+  <div class="process-steps sr">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <h4>Discovery Call</h4>
+      <p>We understand your budget, timeline, preferred locations, and investment objectives in a private consultation.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <h4>Curated Shortlist</h4>
+      <p>Our advisors prepare a personalised shortlist of 3–5 projects that precisely match your criteria and risk appetite.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <h4>Site Visits</h4>
+      <p>We accompany you to project sites, brief you on construction quality, developer reputation, and location dynamics.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <h4>Legal &amp; Financial</h4>
+      <p>Complete title verification, RERA due diligence, home loan facilitation, and documentation support.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">05</div>
+      <h4>Post-Purchase Care</h4>
+      <p>Rental yield management, portfolio review, and resale advisory — we remain your partner after possession.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULT CTA -->
+<div class="consult-strip">
+  <h2>Ready to Build Your <em>Real Estate Portfolio?</em></h2>
+  <div class="consult-btns">
+    <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=919212494936" class="btn-sm-gold" style="padding:14px 32px;">💬 WhatsApp Our Advisor</a>
+    <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=919212494936" class="btn-sm-ghost" style="padding:14px 32px;">Schedule a Site Visit</a>
+  </div>
+</div>
+
+<!-- FOOTER MINI -->
+<div class="footer-mini">
+  <a href="index.html" class="nav-logo" style="text-decoration:none">
+    <div class="nav-crest" style="width:28px;height:28px;font-size:.75rem">⬡</div>
+    <div>
+      <div class="nav-logo-text" style="font-size:.75rem">Apex Capital Trust</div>
+    </div>
+  </a>
+  <span>© 2025 Apex Capital Trust · AMFI ARN-336469. Real estate is subject to market risks. All returns are indicative.</span>
+  <div class="footer-mini-links">
+    <a href="index.html">Home</a>
+    <a href="index.html">Markets</a>
+    <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=919212494936">Contact</a>
+    <a href="#">Privacy Policy</a>
+  </div>
+</div>
+<div style="text-align:center; padding:14px 5%; font-size:0.72rem; color:rgba(255,255,255,0.2); font-family:'Jost',sans-serif; letter-spacing:0.04em; background:var(--ink); border-top:1px solid rgba(255,255,255,0.04);">
+  
+</div>
+
+<script>
+// ── CURSOR ──
+const cur = document.getElementById('cursor'), ring = document.getElementById('cursor-ring');
+if (cur && ring) {
+  let mx=0, my=0, rx=0, ry=0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cur.style.left = mx + 'px'; cur.style.top = my + 'px';
+  });
+  (function anim() {
+    rx += (mx - rx) * .12; ry += (my - ry) * .12;
+    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+    requestAnimationFrame(anim);
+  })();
+  document.querySelectorAll('a,button,.chip,.status-card,.prop-card,.featured-card,.inv-type-chip,.loc-tab').forEach(el => {
+    el.addEventListener('mouseenter', () => { cur.style.width='18px'; cur.style.height='18px'; ring.style.width='48px'; ring.style.height='48px'; ring.style.borderColor='rgba(200,168,75,.6)'; });
+    el.addEventListener('mouseleave', () => { cur.style.width='10px'; cur.style.height='10px'; ring.style.width='34px'; ring.style.height='34px'; ring.style.borderColor='rgba(200,168,75,.35)'; });
+  });
+}
+
+// ── NAVBAR ──
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('compact', scrollY > 80);
+  document.getElementById('filter-bar').classList.toggle('compact', scrollY > 80);
+});
+
+// ── HAMBURGER ──
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobile-nav');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileNav.classList.toggle('open');
+  document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+});
+mobileNav.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileNav.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
+// ── SCROLL REVEAL ──
+const srEls = document.querySelectorAll('.sr');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.07 });
+srEls.forEach(el => observer.observe(el));
+
+// ── CAROUSEL ──
+function scrollCarousel(dir, id) {
+  document.getElementById(id).scrollBy({ left: dir * 320, behavior: 'smooth' });
+}
+
+// ── FILTER CHIPS (single-select per group) ──
+function setFilter(el, group) {
+  el.closest('.filter-chips').querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+}
+
+// ── STATUS CARDS ──
+function setStatusFilter(el) {
+  document.querySelectorAll('.status-card').forEach(c => c.classList.remove('active-status'));
+  el.classList.add('active-status');
+}
+
+// ── LOCATION TABS ──
+function setLocTab(el) {
+  document.querySelectorAll('.loc-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
+</script>
+
+<footer id="contact">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-crest">⬡</div>
+        <div>
+          <div class="nav-logo-text">Apex Capital Trust</div>
+          <div class="nav-logo-sub">Private Wealth Advisory</div>
+        </div>
+      </a>
+      <p>Apex Capital Trust is an AMFI Registered Mutual Fund Distributor and Trusted Channel Partner of Angel One Limited. Empowering financial futures since 2013.</p>
+      <div class="footer-arns">🏅 ARN-336469 · AMFI Registered MFD</div>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="short-term-investment.html">Mutual Funds</a></li>
+        <li><a href="short-term-investment.html#insurance">Insurance</a></li>
+        <li><a href="short-term-investment.html#products">PMS</a></li>
+        <li><a href="real-estate.html">Real Estate</a></li>
+        <li><a href="short-term-investment.html#products">Fixed Deposits</a></li>
+        <li><a href="short-term-investment.html#products">Stock Broking</a></li>
+        <li><a href="short-term-investment.html#products">Risk Profiler</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#">Financial Calculators</a></li>
+        <li><a href="#">Goal Calculators</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Commission Disclosures</a></li>
+        <li><a href="#">Code of Conduct</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>A1&amp;3, 4th Floor, Crown Plaza Mall, Near Neelam Ajronda Metro Station, Sector 15A, Faridabad — 121002</p>
+      <p>📞 <a href="tel:+919212494936">+91 9212494936</a></p>
+      <p>✉️ <a href="mailto:nitinkakkar03@gmail.com">nitinkakkar03@gmail.com</a></p>
+      <div style="margin-top:20px;">
+        <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=919212494936" class="btn-sm-gold" style="padding:11px 22px;">💬 WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+  <hr class="footer-divider">
+  <div class="footer-bottom">
+    <div>© 2025 Apex Capital Trust. All Rights Reserved.</div>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Commission Disclosure</a>
+      <a href="#">Code of Conduct</a>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:20px; font-size:0.72rem; color:rgba(255,255,255,0.2); font-family:'Jost',sans-serif; letter-spacing:0.04em;">
+    Designed &amp; Developed by <a href="mailto:kapil.kukreja07@gmail.com" style="color:rgba(200,168,75,0.5); text-decoration:none; transition:color .2s;" onmouseover="this.style.color='#C8A84B'" onmouseout="this.style.color='rgba(200,168,75,0.5)'">kapil.kukreja07@gmail.com</a>
+  </div>
+  <div class="disclaimer">
+    <strong style="color:rgba(255,255,255,0.45);">Disclaimer:</strong> Mutual Fund investments are subject to market risks. Read all scheme-related documents carefully. NAVs may go up or down depending upon the factors and forces affecting the securities market. Past performance of mutual funds is not necessarily indicative of future performance. Real estate investments are subject to property market risks. This is not financial advice. Please consult a qualified advisor before investing. Apex Capital Trust makes no warranties or representations, express or implied, on products offered through the platform.
+  </div>
+</footer>
+</body>
+</html>
